@@ -493,7 +493,7 @@ function CountryBlock({ country, index, onChange, onRemove }: {
   const updateCity = (id: string, patch: Partial<City>) => onChange({ cities: country.cities.map(c=>c.id===id?{...c,...patch}:c) });
 
   return (
-    <div style={{ background:"#0b1728", borderRadius:14, border:"1px solid #1e3050", overflow:"hidden" }}>
+    <div style={{ background:"#0b1728", borderRadius:14, border:"1px solid #1e3050" }}>
       {/* Header do país */}
       <div style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 16px", cursor:"pointer", borderBottom: expanded?"1px solid #1e3050":"none" }} onClick={()=>setExpanded(e=>!e)}>
         <span style={{ fontSize:22 }}>{country.code ? flag(country.code) : "🏳️"}</span>
@@ -514,7 +514,7 @@ function CountryBlock({ country, index, onChange, onRemove }: {
               placeholder="Digite o nome do país..." style={inp}
               onBlur={()=>setTimeout(()=>setSuggestions([]),200)} />
             {suggestions.length>0 && (
-              <div style={{ position:"absolute", top:"100%", left:0, right:0, background:"#0d1e35", border:"1px solid #1e3050", borderRadius:10, zIndex:99, overflow:"hidden", boxShadow:"0 8px 24px #00000066", marginTop:3 }}>
+              <div style={{ position:"absolute", top:"100%", left:0, right:0, background:"#0d1e35", border:"1px solid #1e3050", borderRadius:10, zIndex:1000, overflow:"hidden", boxShadow:"0 8px 24px #00000066", marginTop:3 }}>
                 {suggestions.map(c=>(
                   <div key={c.code} onClick={()=>selectCountry(c)} style={{ padding:"10px 14px", cursor:"pointer", display:"flex", alignItems:"center", gap:10, fontSize:13 }}
                     onMouseEnter={e=>e.currentTarget.style.background="#1a2e4a"}
@@ -555,7 +555,7 @@ function CountryBlock({ country, index, onChange, onRemove }: {
             </div>
             {/* City suggestions dropdown */}
             {showCitySugg && filteredCities.length > 0 && (
-              <div style={{ position:"absolute", top:"100%", left:0, right:40, background:"#0d1e35", border:"1px solid #1e3050", borderRadius:10, zIndex:99, overflow:"hidden", boxShadow:"0 8px 24px #00000066", marginTop:3, maxHeight:200, overflowY:"auto" }}>
+              <div style={{ position:"absolute", top:"100%", left:0, right:40, background:"#0d1e35", border:"1px solid #1e3050", borderRadius:10, zIndex:1000, boxShadow:"0 8px 24px #00000066", marginTop:3, maxHeight:200, overflowY:"auto" }}>
                 {filteredCities.map(city=>(
                   <div key={city} onMouseDown={()=>addCity(city)}
                     style={{ padding:"9px 14px", cursor:"pointer", fontSize:13, color:"#e8e0cc", display:"flex", alignItems:"center", gap:8 }}
