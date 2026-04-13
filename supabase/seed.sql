@@ -234,7 +234,7 @@ INSERT INTO cities (name, country_code) VALUES
 ('Yokohama','JP'),('Sapporo','JP'),('Fukuoka','JP'),('Kobe','JP'),('Nagoya','JP'),
 ('Nikko','JP'),('Hakone','JP'),('Kanazawa','JP'),('Nagasaki','JP'),('Okinawa','JP'),
 -- China
-('Pequim','CN'),('Xangai','CN'),('Guangzhou','CN'),('Chengdu','CN'),("Xi'an",'CN'),
+('Pequim','CN'),('Xangai','CN'),('Guangzhou','CN'),('Chengdu','CN'),('Xi''an','CN'),
 ('Guilin','CN'),('Hangzhou','CN'),('Suzhou','CN'),('Shenzhen','CN'),('Chongqing','CN'),
 ('Lijiang','CN'),('Zhangjiajie','CN'),('Huangshan','CN'),('Lhasa','CN'),
 -- Coreia do Sul
